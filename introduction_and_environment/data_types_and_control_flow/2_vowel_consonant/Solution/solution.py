@@ -1,6 +1,6 @@
 # Code your solution here
 
-letter = input("Enter a character: ").lower()
+letter = input().lower()
 #print(letter)
 
 lst1 = ['a','e','i','o','u']

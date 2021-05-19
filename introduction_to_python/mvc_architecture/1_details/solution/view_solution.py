@@ -1,9 +1,9 @@
 def capture_name():
-    name = input("Enter the name: ")
-    return name    
+    name = input('enter name')
+    return name
 
-def capture_age():   
-    age = input("Enter the age: ")
+def capture_age():
+    age = input('enter age')
     return age
 
 def display(result):

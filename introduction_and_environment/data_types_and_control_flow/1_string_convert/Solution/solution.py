@@ -1,5 +1,5 @@
 # Code your solution here
-string = input("Enter a String: ")
+string = input()
 #print(type(string))
 #data = ""
 

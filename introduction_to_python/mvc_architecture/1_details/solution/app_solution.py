@@ -1,8 +1,8 @@
-from view_solution import capture_name, capture_age, display
-from model_solution import Name_Age
+from view_solution import capture_name,capture_age,display
+from model_solution import details
 
 name = capture_name()
 age = capture_age()
-info = Name_Age(name, age)
-result = info.store()
-display(result)
+data = details(name,age)
+info = data.store(name,age)
+display(info)

@@ -1,12 +1,11 @@
+class details:
 
-class Name_Age:
-
-    data = []
-    def __init__(self, name, age):
-        self.name = name 
+    def __init__(self,name,age):
+        self.name = name
         self.age = age
 
-    def store(self):
-        Name_Age.data.append(self.name) 
-        Name_Age.data.append(self.age)  
-        return Name_Age.data
+    def store(self,name,age):
+        det =[]
+        det.append(name)
+        det.append(age)
+        return det

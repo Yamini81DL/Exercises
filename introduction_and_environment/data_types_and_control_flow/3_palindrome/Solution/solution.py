@@ -1,5 +1,5 @@
 # Code your solution here
 
-word = input("Enter a word: ")
+word = input()
 is_palindrome = (word == word[::-1])
 print(is_palindrome)

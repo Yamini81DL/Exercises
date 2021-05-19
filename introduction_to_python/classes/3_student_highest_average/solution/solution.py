@@ -1,20 +1,27 @@
 class Student:
-    
-    stud_lst = []
-    
-    def __init__(self, name, age, grades):
+    def __init__(self, name : str, age: int, grades:[]):
         self.name = name
         self.age = age
         self.grades = grades
-        Student.stud_lst.append(self)
-        self.avg = sum(self.grades)/len(self.grades)
-        
-      
+
 def highest_avg(stud_lst):
-   # stud_avg = []
-    sorted(stud_lst, key=lambda x: getattr(x, 'avg'), reverse=True)    
-    #stud_lst.sort(key=lambda x: stud_avg, reverse=True)
-    return stud_lst[0].name
-           
-           
-        
+    stu_avg = {}
+    final_stu = []
+    student = ""
+    for i in stud_lst:
+        avg = sum(i.grades)/len(i.grades)
+        stu_avg[i.name] = avg
+    a = sorted(stu_avg.items(), key=lambda x: x[1])
+    print(a)
+    if len(stud_lst) > 1:
+        if a[-1][1] == a[-2][1]:
+            final_stu.append(a[-1][0])
+            final_stu.append(a[-2][0])
+            final_stu.sort()
+            student = final_stu[0]
+        else:
+            student = a[-1][0]
+    else:
+        student = a[-1][0]
+
+    return student
